@@ -12,81 +12,85 @@ while True:
   print("Options: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10")
   run = input("Enter the problem you want to run: ")
   run = int(run)
-  game=run
+  game = run
   if run == 1:
-      for i in range(1000):
-          print(i)
+    for i in range(1000):
+      print(i)
   elif run == 2:
-      for i in range(1000):
-          if i % 2 != 0:
-              print(i, end=" ")
+    for i in range(1000):
+      if i % 2 != 0:
+        print(i, end=" ")
   elif run == 3:
-      for i in range(0,1000):
-          if i % 3 == 0:
-              print(i)
+    for i in range(0, 1000):
+      if i % 3 == 0:
+        print(i)
   elif run == 4:
-      for i in range(1,1000):
-          if (i % 3 == 0 or i % 5 == 0):
-              print(i)
+    for i in range(1, 1001):
+      if (i % 3 == 0) or (i % 5 == 0):
+        print(i)
   elif run == 5:
-      num = int(input("Enter a number greater than 200: "))
-      while num < 200:
-          num = int(input("Too low"))
-  
-      for i in range(1, num):
-          if (i % 11 == 0 or i % 13 == 0):
-              print(i)
-          # else:
-              # print(input("Enter a number greater than 200."))
+    num = int(input("Enter a number greater than 200: "))
+    while num < 200:
+      num = int(input("Too low"))
+
+    for i in range(1, num):
+      if (i % 11 == 0 or i % 13 == 0):
+        print(i)
+      # else:
+      # print(input("Enter a number greater than 200."))
   elif run == 6:
-      string = "I hate python"
-      for loc in range(len(string)):
-          print(string[loc])
+    string = "I hate python"
+    for loc in range(len(string)):
+      print(string[loc])
   elif run == 7:
-      user = input("Enter a ten character string. ")
-      for l in range(0, len(user), 2):
-          print(user[l])
+    user = input("Enter a ten character string. ")
+    for l in range(0, len(user), 2):
+      print(user[l])
   elif run == 8:
-      import random
-      ones = 0
-      twos = 0
-      threes = 0
-      fours = 0
-      fives = 0
-      sixes = 0
-      for rolls in range(1000):
-          dice = random.randint(1,6)
-          if dice == 1:
-              ones += 1
-          elif dice == 2:
-              twos += 1
-          elif dice == 3:
-              threes +=1
-          elif dice == 4:
-              fours += 1
-          elif dice == 5:
-              fives +=1
-          else:
-              sixes +=1
-              print(dice)
-              print(f"You rolled {ones} 1s, {twos} 2s, {threes} 3s, {fours} 4s, {fives} 5s, and {sixes} 6s.")
+    import random
+    ones = 0
+    twos = 0
+    threes = 0
+    fours = 0
+    fives = 0
+    sixes = 0
+    for rolls in range(1000):
+      dice = random.randint(1, 6)
+      if dice == 1:
+        ones += 1
+      elif dice == 2:
+        twos += 1
+      elif dice == 3:
+        threes += 1
+      elif dice == 4:
+        fours += 1
+      elif dice == 5:
+        fives += 1
+      else:
+        sixes += 1
+        print(f"You rolled {ones} 1s.")
+        print(f"You rolled {twos} 2s.")
+        print(f"You rolled {threes} 3s.")
+        print(f"You rolled {fours} 4s.")
+        print(f"You rolled {fives} 5s.")
+        print(f"You rolled {sixes} 6s.")
   elif run == 9:
-      num2 = int(input("Enter a number: "))
-      if num2 > 1:
-          for i in range(2, int(num2/2)+1):
-              if (num2 % i) == 0:
-                  print(num2, "is not a prime number")
-                  break
-              else:
-                  print(num2, "is a prime number")
-                  break
+    num2 = int(input("Enter a number: "))
+    if num2 > 1:
+      for i in range(2, int(num2 / 2) + 1):
+        if (num2 % i) == 0:
+          print(num2, "is not a prime number")
+          break
+        else:
+          print(num2, "is a prime number")
+          break
   elif run == 10:
-      for num in range(2,1000):
-          for i in range(2, num):
-              if num % i == 0:
-                  break
-          else:
-              print({num}, 'is a prime number')
+    for num in range(2, 1000):
+      for i in range(2, num):
+        if num % i == 0:
+          break
+      else:
+        print({num}, 'is a prime number')
   restart = input("Run again? ")
   if "Yes" in restart:
     continue
